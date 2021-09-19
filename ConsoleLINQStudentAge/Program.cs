@@ -16,7 +16,8 @@ namespace ConsoleLINQStudentAge
                 new Student() { StudentID = 2, StudentName = "Moin",  Age = 21 } ,
                 new Student() { StudentID = 3, StudentName = "Bill",  Age = 18 } ,
                 new Student() { StudentID = 4, StudentName = "Ram" , Age = 20} ,
-                new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 }
+                new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 },
+                new Student() { StudentID = 5, StudentName = "Lily" , Age = 15 }
             };
 
             var LinqRes = from stu in stuList
@@ -27,14 +28,30 @@ namespace ConsoleLINQStudentAge
                 Console.WriteLine(item);
             }
 
+            // LINQ Method Syntax
             Console.WriteLine("+++++++++++++ LINQ Method Syntax +++++++++++");
-
             var result = stuList.Where(s => s.Age >= 18 && s.Age <= 20);
             foreach (Student student in result)
             {
                 Console.WriteLine(student.StudentName);
             }
-            
+
+            // Return a List of the students
+            Console.WriteLine("+++ LINQ Method Syntax -Return List<Student> +++++");
+            List<Student> list = stuList.Where(s => s.Age >= 18 && s.Age <= 20).ToList<Student>();
+
+            foreach (Student student in list)
+            {
+                Console.WriteLine(student.StudentName);
+            }
+
+            // Return odd student
+            Console.WriteLine("+++++ Return odd students +++++");
+            var oddStudents = stuList.Where((s, i) => (i % 2 != 0));
+            foreach (var item in oddStudents)
+            {
+                Console.WriteLine(item.StudentName);
+            }
         }
     }
 }
