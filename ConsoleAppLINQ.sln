@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppLINQ", "ConsoleAppLINQ\ConsoleAppLINQ.csproj", "{A2C5A320-9480-4966-8FE5-B78ED8A946EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQToArray", "LINQToArray\LINQToArray.csproj", "{F1E8795F-EB32-4927-8072-6EDC18636984}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQToArray", "LINQToArray\LINQToArray.csproj", "{F1E8795F-EB32-4927-8072-6EDC18636984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleLINQStudentAge", "ConsoleLINQStudentAge\ConsoleLINQStudentAge.csproj", "{27797F6C-E7C7-4468-892B-552244961C4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F1E8795F-EB32-4927-8072-6EDC18636984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1E8795F-EB32-4927-8072-6EDC18636984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1E8795F-EB32-4927-8072-6EDC18636984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27797F6C-E7C7-4468-892B-552244961C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27797F6C-E7C7-4468-892B-552244961C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27797F6C-E7C7-4468-892B-552244961C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27797F6C-E7C7-4468-892B-552244961C4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

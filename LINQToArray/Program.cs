@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace LINQToArray
 {
@@ -9,8 +10,18 @@ namespace LINQToArray
             Console.WriteLine("LINQ to Array!");
             // Data source
             string[] names = { "Tom", "Jerry", "Bill", "Trump", "Joe", "Obama" };
-            // LIN Query
+            // LINQ Query
+            var myLinQueryResults = from x in names
+                             where x.Contains('m')
+                             select x;
 
+            // Show results
+            string str = "";
+            foreach (var name in myLinQueryResults)
+            {
+                str += (name + " "); 
+            }
+            Console.WriteLine(str);
         }
     }
 }
