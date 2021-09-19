@@ -8,7 +8,7 @@ namespace ConsoleLINQStudentAge
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("LINQ Query!");
+            Console.WriteLine("+++++++++++++ LINQ Query Syntax +++++++++++");
 
             List<Student> stuList = new List<Student>()
             {
@@ -26,6 +26,15 @@ namespace ConsoleLINQStudentAge
             {
                 Console.WriteLine(item);
             }
+
+            Console.WriteLine("+++++++++++++ LINQ Method Syntax +++++++++++");
+
+            var result = stuList.Where(s => s.Age >= 18 && s.Age <= 20);
+            foreach (Student student in result)
+            {
+                Console.WriteLine(student.StudentName);
+            }
+            
         }
     }
 }
