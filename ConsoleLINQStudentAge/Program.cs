@@ -52,6 +52,19 @@ namespace ConsoleLINQStudentAge
             {
                 Console.WriteLine(item.StudentName);
             }
+
+            // Using multiple where clause
+            Console.WriteLine("+++++++Using multiple where clause ++++++++++");
+            var multipleWhereRes = from s in stuList
+                                   where s.Age >= 18 && s.Age <= 20
+                                   where s.StudentName.Contains("m")
+                                   select s;
+
+            foreach (Student stu in multipleWhereRes)
+            {
+                Console.WriteLine(stu.StudentName);
+            }
+
         }
     }
 }
